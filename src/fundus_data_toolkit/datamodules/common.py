@@ -32,7 +32,7 @@ class BaseDatamodule(LightningDataModule):
         num_workers: int = 4,
         persistent_workers: bool = True,
         eval_batch_size: Optional[int] = None,
-        drop_last: bool = False,
+        drop_last: bool = True,
     ):
         super().__init__()
         if isinstance(img_size, int):
