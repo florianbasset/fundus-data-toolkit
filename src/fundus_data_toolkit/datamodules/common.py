@@ -274,7 +274,6 @@ class FundusDatamodule(BaseDatamodule):
                     value=0,
                 ),
             ],
-            strict=False,
             additional_targets={"roi": "mask"},
         )
 
@@ -283,7 +282,6 @@ class FundusDatamodule(BaseDatamodule):
         return A.Compose(
             [A.Normalize(mean=mean, std=std, always_apply=True), ToTensorV2()],
             additional_targets={"roi": "mask"},
-            strict=False,
         )
 
 
